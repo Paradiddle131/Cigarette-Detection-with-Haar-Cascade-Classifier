@@ -1,5 +1,14 @@
 # Cigarette Detection
 
+<!-- TOC -->
+
+- [Building on Linux](#building-on-linux)
+- [Dataset](#dataset)
+- [Preparation](#preparation)
+- [Results](#results)
+
+<!-- /TOC -->
+
 ### Building on Linux
 We are going to follow the instructions given [here](https://pythonprogramming.net/haar-cascade-object-detection-python-opencv-tutorial/):
 
