@@ -1,0 +1,5 @@
+opencv_createsamples -img cigar100x75.jpg -bg bg.txt -info positive_images/info.lst -pngout positive_images -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 1950
+
+opencv_createsamples -info positive_images/info.lst -num 1950 -w 50 -h 30 -vec positives.vec
+
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1900 -numNeg 950 -numStages 20 -w 50 -h 30 
