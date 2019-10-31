@@ -5,6 +5,7 @@
 - [Building on Linux](#building-on-linux)
 - [Dataset](#dataset)
 - [Preparation](#preparation)
+- [Training](#training)
 - [Results](#results)
 
 <!-- /TOC -->
@@ -50,15 +51,17 @@ Once the positive samples have been created, we need a new file which contains i
 ```bash
 opencv_createsamples -info positive_images/info.lst -num 1950 -w 50 -h 40 -vec positives.vec
 ```
+
+### Training
 Now, it's time to train a haar cascade to detect cigarettes in images and hopefully in videos.
 ```bash
 opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1900 -numNeg 950 -numStages 6 -w 50 -h 40 
 ```
 Done!
 
+### Results
 Now we can try our cascade using the codes in the ***detect_my_cigar.ipynb*** notebook.
 
-### Results
 <img src="https://user-images.githubusercontent.com/36932448/67939156-01081b80-fbe2-11e9-9cbf-91e728a518af.jpeg"
      alt="Markdown Monster icon" 
      width=720; height=480/>
